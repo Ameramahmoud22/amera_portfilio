@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amera Elbassal — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --purple:  #7c3aed;
+      --teal:    #06b6d4;
+      --text:    #1e293b;
+      --muted:   #475569;
+      --dim:     #64748b;
+      --border:  #e2e8f0;
+      --bg:      #f8fafc;
+      --white:   #ffffff;
+      --font:    'Inter', sans-serif;
+      --mono:    'Fira Code', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── PRINT / DOWNLOAD BAR ── */
+    .action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1e1e35;
+      padding: 12px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .action-bar span {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+
+    .action-bar span em {
+      color: #67e8f9;
+      font-style: normal;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #7c3aed, #06b6d4);
+      color: #fff;
+    }
+    .btn-print:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-back {
+      background: rgba(255,255,255,0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.13); }
+
+    /* ── RESUME WRAPPER ── */
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    .resume-page {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .resume-header {
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      padding: 44px 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resume-header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(124,58,237,0.3), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .resume-header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(6,182,212,0.2), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header-content { position: relative; z-index: 1; }
+
+    .resume-name {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+
+    .resume-title {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: #67e8f9;
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-chip:hover { color: #67e8f9; }
+    .contact-chip i { color: #a78bfa; font-size: 0.75rem; }
+
+    /* ── BODY ── */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+    }
+
+    /* SIDEBAR */
+    .resume-sidebar {
+      background: #f1f5f9;
+      padding: 32px 24px;
+      border-right: 1px solid var(--border);
+    }
+
+    /* MAIN */
+    .resume-main {
+      padding: 32px 36px;
+    }
+
+    /* ── SECTION BLOCKS ── */
+    .r-section {
+      margin-bottom: 28px;
+    }
+
+    .r-section:last-child { margin-bottom: 0; }
+
+    .r-section-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--purple);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .r-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--border), transparent);
+    }
+
+    /* Sidebar skills */
+    .skill-list { display: flex; flex-direction: column; gap: 6px; }
+
+    .skill-item {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-item::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--teal));
+      flex-shrink: 0;
+    }
+
+    /* Sidebar tags */
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .r-tag {
+      font-size: 0.7rem;
+      padding: 3px 9px;
+      background: rgba(124,58,237,0.08);
+      color: var(--purple);
+      border: 1px solid rgba(124,58,237,0.18);
+      border-radius: 12px;
+    }
+
+    /* Education block */
+    .edu-block { font-size: 0.82rem; color: var(--muted); }
+    .edu-block strong { color: var(--text); font-size: 0.88rem; }
+    .edu-block .edu-sub { color: var(--dim); margin-top: 3px; }
+    .edu-block .edu-grade {
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(124,58,237,0.08);
+      color: var(--purple);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* ── EXPERIENCE ITEMS ── */
+    .exp-item { margin-bottom: 22px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 3px;
+    }
+
+    .exp-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .exp-badge {
+      font-size: 0.62rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    .exp-badge.full { background: rgba(52,211,153,0.1); color: #059669; border: 1px solid rgba(52,211,153,0.2); }
+    .exp-badge.part { background: rgba(251,191,36,0.1); color: #b45309; border: 1px solid rgba(251,191,36,0.2); }
+
+    .exp-company {
+      font-size: 0.8rem;
+      color: var(--teal);
+      margin-bottom: 3px;
+      font-weight: 500;
+    }
+
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--dim);
+      white-space: nowrap;
+    }
+
+    .exp-points {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .exp-points li {
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .exp-points li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+      font-size: 0.65rem;
+      top: 2px;
+    }
+
+    .exp-points strong { color: var(--text); }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .exp-tags span {
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      padding: 2px 8px;
+      background: #f1f5f9;
+      color: var(--dim);
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Divider */
+    .r-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 18px 0;
+    }
+
+    /* ── PROJECT ITEMS ── */
+    .proj-item { margin-bottom: 16px; }
+    .proj-item:last-child { margin-bottom: 0; }
+
+    .proj-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .proj-date {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--dim);
+      font-weight: 400;
+    }
+
+    .proj-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 6px;
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      .action-bar  { display: none !important; }
+      body         { background: #fff; }
+      .resume-wrapper { margin: 0; padding: 0; max-width: 100%; }
+      .resume-page {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .resume-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .resume-sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @media (max-width: 680px) {
+      .resume-body { grid-template-columns: 1fr; }
+      .resume-sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+      .resume-header { padding: 28px 24px; }
+      .resume-name { font-size: 1.8rem; }
+      .resume-main { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ACTION BAR -->
+  <div class="action-bar">
+    <span>resume · <em>Amera Elbassal</em></span>
+    <div class="action-buttons">
+      <a href="index.html" class="action-btn btn-back">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <button class="action-btn btn-print" onclick="window.print()">
+        <i class="fas fa-download"></i> Download / Print PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="resume-wrapper">
+    <div class="resume-page">
+
+      <!-- HEADER -->
+      <div class="resume-header">
+        <div class="header-content">
+          <h1 class="resume-name">Amera Elbassal</h1>
+          <p class="resume-title">Backend Developer · .NET Core & Django</p>
+          <div class="contact-row">
+            <a href="tel:+01550914683" class="contact-chip">
+              <i class="fas fa-phone"></i> +01550914683
+            </a>
+            <a href="mailto:ameraelbassal552005@gmail.com" class="contact-chip">
+              <i class="fas fa-envelope"></i> ameraelbassal552005@gmail.com
+            </a>
+            <span class="contact-chip">
+              <i class="fas fa-map-marker-alt"></i> Gharbia, Egypt
+            </span>
+            <a href="https://www.linkedin.com/in/amera-elbassal-50b984272" target="_blank" class="contact-chip">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Ameramahmoud22" target="_blank" class="contact-chip">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="resume-body">
+
+        <!-- SIDEBAR -->
+        <aside class="resume-sidebar">
+
+          <div class="r-section">
+            <h3 class="r-section-title">Technical Skills</h3>
+            <div class="skill-list">
+              <span class="skill-item">ASP.NET Core</span>
+              <span class="skill-item">Django / REST Framework</span>
+              <span class="skill-item">C# &amp; Python</span>
+              <span class="skill-item">PHP</span>
+              <span class="skill-item">SQL Server &amp; PostgreSQL</span>
+              <span class="skill-item">Entity Framework Core</span>
+              <span class="skill-item">RESTful API Design</span>
+              <span class="skill-item">JWT Authentication</span>
+              <span class="skill-item">MVC Architecture</span>
+              <span class="skill-item">Clean Architecture</span>
+              <span class="skill-item">SignalR</span>
+              <span class="skill-item">Stripe Payments</span>
+              <span class="skill-item">OOP &amp; SOLID Principles</span>
+              <span class="skill-item">Git &amp; Version Control</span>
+              <span class="skill-item">Swagger / OpenAPI</span>
+              <span class="skill-item">HTML · CSS · Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="r-section">
+            <h3 class="r-section-title">Education</h3>
+            <div class="edu-block">
+              <strong>BSc Computer Science</strong>
+              <p class="edu-sub">Mansoura University</p>
+              <p class="edu-sub">Sep 2021 – June 2025</p>
+              <p class="edu-sub">Mansoura, Dakahliya</p>
+              <span class="edu-grade"><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem;"></i> Very Good with Honour</span>
+              <span class="edu-grade" style="margin-top:6px; background:rgba(6,182,212,0.08); color:#06b6d4; border-color:rgba(6,182,212,0.25);">
+                <i class="fas fa-microscope" style="color:#06b6d4;font-size:0.65rem;"></i> Applying for Master's Degree
+              </span>
+            </div>
+          </div>
+
+          <div class="r-section">
+            <h3 class="r-section-title">Interests</h3>
+            <div class="tag-list">
+              <span class="r-tag">Backend Architecture</span>
+              <span class="r-tag">API Design</span>
+              <span class="r-tag">Databases</span>
+              <span class="r-tag">Mentoring</span>
+              <span class="r-tag">Open Source</span>
+              <span class="r-tag">Clean Code</span>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- MAIN -->
+        <main class="resume-main">
+
+          <!-- EXPERIENCE -->
+          <div class="r-section">
+            <h3 class="r-section-title">Experience</h3>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">Backend Developer <span class="exp-badge full">Full-time</span></p>
+                  <p class="exp-company">Azzrk</p>
+                </div>
+                <span class="exp-date">Dec 2025 – Aug 2026</span>
+              </div>
+              <ul class="exp-points">
+                <li>Designing and implementing <strong>RESTful APIs</strong> using Django</li>
+                <li>Developing scalable backend architectures and managing relational databases</li>
+                <li>Handling authentication, authorization, data validation, and frontend integration</li>
+                <li>Applying best practices: clean, optimized, maintainable code</li>
+              </ul>
+              <div class="exp-tags">
+                <span>Django</span><span>Python</span><span>PostgreSQL</span><span>REST API</span>
+              </div>
+            </div>
+
+            <hr class="r-divider" />
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">Backend Developer <span class="exp-badge part">Part-time</span></p>
+                  <p class="exp-company">Al-Banna &amp; Al-Benaa</p>
+                </div>
+                <span class="exp-date">Jul 2025 – Dec 2025</span>
+              </div>
+              <ul class="exp-points">
+                <li>Built customer/services management system with <strong>ASP.NET Core MVC</strong> &amp; EF Core</li>
+                <li>Implemented full CRUD through RESTful APIs with SQL Server database</li>
+                <li>Delivered dashboard for client info, service details, and customer feedback</li>
+                <li>Applied clean architecture for scalability and long-term maintainability</li>
+              </ul>
+              <div class="exp-tags">
+                <span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>MVC</span>
+              </div>
+            </div>
+
+            <hr class="r-divider" />
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">Backend Mentor &amp; Supervisor</p>
+                  <p class="exp-company">CAT Reloaded — Mansoura University</p>
+                </div>
+                <span class="exp-date">Nov 2024 – Present</span>
+              </div>
+              <ul class="exp-points">
+                <li>Mentoring and following up with beginners in the Backend Track</li>
+                <li>Delivering online &amp; offline sessions to <strong>20+ students</strong></li>
+                <li>Topics: .NET, version control, API design, databases</li>
+              </ul>
+            </div>
+
+            <hr class="r-divider" />
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">Route Trainee — .NET Backend</p>
+                  <p class="exp-company">Route Academy</p>
+                </div>
+                <span class="exp-date">Nov 2024 – May 2025</span>
+              </div>
+              <ul class="exp-points">
+                <li>Diploma in backend development: MVC, C#, Entity Framework, API development</li>
+              </ul>
+            </div>
+
+            <hr class="r-divider" />
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">ITI Summer Training — .NET Backend</p>
+                  <p class="exp-company">Information Technology Institute (ITI)</p>
+                </div>
+                <span class="exp-date">Jul 2024 – Sep 2024</span>
+              </div>
+              <ul class="exp-points">
+                <li>Intensive training: .NET Core, C#, API design, database integration, MVC</li>
+              </ul>
+            </div>
+
+            <hr class="r-divider" />
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-title">Zewail Trainee — AI Applications</p>
+                  <p class="exp-company">Zewail City</p>
+                </div>
+                <span class="exp-date">Aug 2023 – Nov 2023</span>
+              </div>
+              <ul class="exp-points">
+                <li>AI fundamentals, tools, and real-world application concepts</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PROJECTS -->
+          <div class="r-section">
+            <h3 class="r-section-title">Projects</h3>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Employees Attendance System
+                <span class="proj-date">2025</span>
+              </p>
+              <p class="proj-desc">
+                ASP.NET Core MVC application for managing employee attendance records. Features a
+                clean MVC architecture with Controllers, ViewModels, EF Core migrations, and SQL Server
+                database for reliable attendance tracking and management.
+              </p>
+              <div class="exp-tags">
+                <span>ASP.NET Core MVC</span><span>C#</span><span>EF Core</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Madaar — Local RAG Chat
+                <span class="proj-date">2025</span>
+              </p>
+              <p class="proj-desc">
+                A self-contained RAG chat application built with Django and Django Channels. Users upload
+                PDF documents and ask questions in real-time via WebSockets. Fully local AI pipeline:
+                all-MiniLM-L6-v2 for embeddings, flan-t5-small for generation, and FAISS as the vector store.
+                Token-based authentication with no external API keys required.
+              </p>
+              <div class="exp-tags">
+                <span>Django</span><span>WebSockets</span><span>LangChain</span><span>FAISS</span><span>HuggingFace</span>
+              </div>
+            </div>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Nexus Backend
+                <span class="proj-date">Nov 2024 – May 2025</span>
+              </p>
+              <p class="proj-desc">
+                Secure, scalable RESTful API with ASP.NET Core (.NET 8), JWT auth, role-based authorization,
+                Stripe payment integration, EF Core modular architecture, SignalR real-time leaderboard,
+                and Swagger/OpenAPI documentation.
+              </p>
+              <div class="exp-tags">
+                <span>ASP.NET Core</span><span>.NET 8</span><span>JWT</span><span>Stripe</span><span>SignalR</span>
+              </div>
+            </div>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Climate Codex
+                <span class="proj-date">Oct 2024</span>
+              </p>
+              <p class="proj-desc">
+                ASP.NET Core backend bridging a Python ML API for CH₄ methane emissions data,
+                with tile-based raster map visualization.
+              </p>
+              <div class="exp-tags">
+                <span>ASP.NET Core</span><span>Python</span><span>ML API</span>
+              </div>
+            </div>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Discussion Board
+                <span class="proj-date">Oct 2024</span>
+              </p>
+              <p class="proj-desc">
+                Modular Django MVT discussion system with full auth (registration, login, sessions)
+                and dynamic templates using Bootstrap and widget_tweaks.
+              </p>
+              <div class="exp-tags">
+                <span>Django</span><span>Python</span><span>Bootstrap</span>
+              </div>
+            </div>
+
+            <div class="proj-item">
+              <p class="proj-title">
+                Educational Platform
+                <span class="proj-date">Jul 2024 – Sep 2024</span>
+              </p>
+              <p class="proj-desc">
+                MVC CRUD system for managing students, courses, and departments using EF Core,
+                SQL Server, and dynamic user-input-aware forms.
+              </p>
+              <div class="exp-tags">
+                <span>ASP.NET MVC</span><span>EF Core</span><span>SQL Server</span>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div><!-- /resume-body -->
+    </div><!-- /resume-page -->
+  </div><!-- /resume-wrapper -->
+
+</body>
+</html>

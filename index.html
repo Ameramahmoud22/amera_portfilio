@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amera Elbassal | Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== CURSOR GLOW ===== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Amera Elbassal<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="resume.html" target="_blank" class="nav-link nav-link-resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+      </ul>
+      <a href="mailto:ameraelbassal552005@gmail.com" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Hi, I'm</span>
+        <span class="line highlight">Amera Elbassal</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">I build</span>
+        <span class="role-text" id="roleText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">
+        Backend Developer specializing in <strong>.NET Core</strong> & <strong>Django</strong> — crafting
+        scalable APIs, clean architectures, and reliable server-side systems.
+        Currently working at <strong>Azzrk</strong> and mentoring at <strong>CAT Reloaded</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Get In Touch
+        </a>
+        <a href="resume.html" target="_blank" class="btn btn-ghost">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:ameraelbassal552005@gmail.com" class="social-icon" aria-label="Email" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/Ameramahmoud22" target="_blank" class="social-icon" aria-label="GitHub" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amera-elbassal-50b984272" target="_blank" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="tel:+01550914683" class="social-icon" aria-label="Phone" title="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">developer.cs</span>
+        </div>
+        <pre class="code-body"><code><span class="kw">public class</span> <span class="cls">AmeraElbassal</span>
+{
+    <span class="kw">public string</span> Role <span class="op">=</span> <span class="str">"Backend Developer"</span>;
+    <span class="kw">public string[]</span> Stack <span class="op">=</span> {
+        <span class="str">"ASP.NET Core"</span>,
+        <span class="str">"Django"</span>,
+        <span class="str">"C#"</span>, <span class="str">"Python"</span>,
+        <span class="str">"PostgreSQL"</span>
+    };
+    <span class="kw">public bool</span> OpenToWork <span class="op">=</span> <span class="kw">true</span>;
+
+    <span class="kw">public string</span> <span class="fn">GetPassion</span>()
+    {
+        <span class="kw">return</span> <span class="str">"Clean APIs &amp; Scalable Systems"</span>;
+    }
+}</code></pre>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01. About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science graduate from <strong>Mansoura University</strong> (Class of 2025, Very Good grade)
+            with a deep passion for building robust backend systems. I specialize in designing and implementing
+            RESTful APIs, clean architecture patterns, and scalable databases.
+          </p>
+          <p>
+            My journey spans intensive training at <strong>ITI</strong> in .NET backend development,
+            AI fundamentals at <strong>Zewail City</strong>, and hands-on experience at multiple companies.
+            Today I work full-time as a Backend Developer at <strong>Azzrk</strong> using Django,
+            and I give back by <strong>mentoring 20+ beginners</strong> at CAT Reloaded, Mansoura University.
+          </p>
+          <p>
+            I believe great software is built on clean code, clear thinking, and continuous learning.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Students Mentored</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Companies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">1+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap">
+          <div class="about-card">
+            <div class="about-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">AE</div>
+            </div>
+            <h3>Amera Elbassal</h3>
+            <p class="about-card-role">Backend Developer</p>
+            <ul class="about-info-list">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Gharbia, Egypt</span>
+              </li>
+              <li>
+                <i class="fas fa-graduation-cap"></i>
+                <span>BSc Computer Science</span>
+              </li>
+              <li>
+                <i class="fas fa-briefcase"></i>
+                <span>Azzrk — Full Time</span>
+              </li>
+              <li>
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>CAT Reloaded Mentor</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02. Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category" data-delay="0">
+          <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag tag-primary">ASP.NET Core</span>
+            <span class="tag tag-primary">Django</span>
+            <span class="tag tag-primary">RESTful APIs</span>
+            <span class="tag tag-primary">MVC Architecture</span>
+            <span class="tag tag-primary">SignalR</span>
+            <span class="tag tag-primary">Middleware</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-delay="100">
+          <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag tag-secondary">C#</span>
+            <span class="tag tag-secondary">Python</span>
+            <span class="tag tag-secondary">PHP</span>
+            <span class="tag tag-secondary">HTML</span>
+            <span class="tag tag-secondary">CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-delay="200">
+          <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+          <h3>Database</h3>
+          <div class="skill-tags">
+            <span class="tag tag-accent">SQL Server</span>
+            <span class="tag tag-accent">PostgreSQL</span>
+            <span class="tag tag-accent">Entity Framework Core</span>
+            <span class="tag tag-accent">Database Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-delay="300">
+          <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools & Concepts</h3>
+          <div class="skill-tags">
+            <span class="tag tag-green">JWT Auth</span>
+            <span class="tag tag-green">Stripe Payments</span>
+            <span class="tag tag-green">Swagger/OpenAPI</span>
+            <span class="tag tag-green">OOP</span>
+            <span class="tag tag-green">Clean Architecture</span>
+            <span class="tag tag-green">Git</span>
+            <span class="tag tag-green">Bootstrap</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="skills-bars">
+        <h3 class="skills-bars-title">Proficiency</h3>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label">
+            <span>ASP.NET Core / C#</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label">
+            <span>Django / Python</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label">
+            <span>SQL / PostgreSQL</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label">
+            <span>Entity Framework Core</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="88"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label">
+            <span>RESTful API Design</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="92"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03. Experience</span>
+        <h2 class="section-title">Career Journey</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- Azzrk -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot active"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Backend Developer <span class="badge badge-full">Full-time</span></h3>
+                <p class="card-company"><i class="fas fa-building"></i> Azzrk</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Dec 2025 – Aug 2026</span>
+            </div>
+            <ul class="card-points">
+              <li>Designing and implementing RESTful APIs using <strong>Django</strong></li>
+              <li>Developing scalable backend architectures and managing relational databases</li>
+              <li>Applying software engineering best practices — clean, optimized, maintainable code</li>
+              <li>Handling authentication, authorization, data validation, and frontend integration</li>
+            </ul>
+            <div class="card-tags">
+              <span>Django</span><span>Python</span><span>PostgreSQL</span><span>REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Al-Banna -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Backend Developer <span class="badge badge-part">Part-time</span></h3>
+                <p class="card-company"><i class="fas fa-building"></i> Al-Banna & Al-Benaa</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Jul 2025 – Dec 2025</span>
+            </div>
+            <ul class="card-points">
+              <li>Built a customer and services management system with <strong>ASP.NET Core MVC</strong> & EF Core</li>
+              <li>Implemented full CRUD operations through RESTful APIs with SQL Server</li>
+              <li>Delivered an intuitive dashboard for client info, service details, and feedback management</li>
+              <li>Applied clean architecture principles ensuring scalability and long-term reliability</li>
+            </ul>
+            <div class="card-tags">
+              <span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>MVC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAT Reloaded -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Backend Mentor & Supervisor</h3>
+                <p class="card-company"><i class="fas fa-university"></i> CAT Reloaded — Mansoura University</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Nov 2024 – Present</span>
+            </div>
+            <ul class="card-points">
+              <li>Providing mentorship and follow-up to beginners in the Backend Track</li>
+              <li>Delivering online & offline sessions to <strong>20+ students</strong> on backend fundamentals</li>
+              <li>Topics covered: <strong>.NET</strong>, version control, API design, databases</li>
+            </ul>
+            <div class="card-tags">
+              <span>.NET</span><span>Mentoring</span><span>Git</span><span>Teaching</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Route Trainee -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Route Trainee — .NET Backend</h3>
+                <p class="card-company"><i class="fas fa-laptop-code"></i> Route Academy</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Nov 2024 – May 2025</span>
+            </div>
+            <ul class="card-points">
+              <li>Pursuing a diploma specializing in backend development with .NET technologies</li>
+              <li>Focus areas: MVC, C#, Entity Framework, API development</li>
+              <li>Building scalable and efficient server-side solutions</li>
+            </ul>
+            <div class="card-tags">
+              <span>C#</span><span>MVC</span><span>EF Core</span><span>APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITI -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">ITI Summer Training — .NET Backend</h3>
+                <p class="card-company"><i class="fas fa-graduation-cap"></i> Information Technology Institute (ITI)</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Jul 2024 – Sep 2024</span>
+            </div>
+            <ul class="card-points">
+              <li>Intensive training on .NET Core, C#, and backend development techniques</li>
+              <li>Topics: API design, database integration, MVC architecture</li>
+            </ul>
+            <div class="card-tags">
+              <span>.NET Core</span><span>C#</span><span>API Design</span><span>MVC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zewail -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Zewail Trainee — AI Applications</h3>
+                <p class="card-company"><i class="fas fa-robot"></i> Zewail City</p>
+              </div>
+              <span class="card-date"><i class="far fa-calendar-alt"></i> Aug 2023 – Nov 2023</span>
+            </div>
+            <ul class="card-points">
+              <li>Completed training on the fundamentals of Artificial Intelligence and practical applications</li>
+              <li>Focus on foundational AI concepts, tools, and real-world use cases</li>
+            </ul>
+            <div class="card-tags">
+              <span>AI</span><span>Machine Learning</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04. Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Nexus Backend -->
+        <div class="project-card featured">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-badge">Featured</div>
+          <h3 class="project-title">Nexus Backend</h3>
+          <p class="project-date">Nov 2024 – May 2025</p>
+          <p class="project-desc">
+            A secure, scalable RESTful API built with ASP.NET Core (.NET 8) featuring JWT authentication,
+            role-based authorization, Stripe payment integration, and real-time leaderboard updates via SignalR.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> JWT-based auth & role-based authorization</li>
+            <li><i class="fas fa-check-circle"></i> Stripe payment processing integration</li>
+            <li><i class="fas fa-check-circle"></i> Modular EF Core architecture with SignalR</li>
+            <li><i class="fas fa-check-circle"></i> Swagger/OpenAPI docs & custom middleware</li>
+          </ul>
+          <div class="project-stack">
+            <span>ASP.NET Core</span><span>.NET 8</span><span>EF Core</span>
+            <span>JWT</span><span>Stripe</span><span>SignalR</span><span>Swagger</span>
+          </div>
+        </div>
+
+        <!-- Climate Codex -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-leaf"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Climate Codex</h3>
+          <p class="project-date">Oct 2024</p>
+          <p class="project-desc">
+            A data visualization system for CH₄ methane emissions, featuring an ASP.NET Core backend
+            that interacts with a Python-based ML API and renders emissions data on a tile-based raster map.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> ASP.NET Core ↔ Python ML API bridge</li>
+            <li><i class="fas fa-check-circle"></i> CH₄ emissions map with raster tile visualization</li>
+            <li><i class="fas fa-check-circle"></i> Cross-platform: Visual Studio + VS Code</li>
+          </ul>
+          <div class="project-stack">
+            <span>ASP.NET Core</span><span>Python</span><span>ML API</span><span>Data Viz</span>
+          </div>
+        </div>
+
+        <!-- Al-Banna System -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-building"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Al-Banna & Al-Benaa System</h3>
+          <p class="project-date">Jul 2025 – Dec 2025</p>
+          <p class="project-desc">
+            A customer and services management platform with ASP.NET Core MVC, featuring a SQL Server
+            database, full CRUD via RESTful APIs, and a dashboard for managing clients and feedback.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Full CRUD with RESTful APIs</li>
+            <li><i class="fas fa-check-circle"></i> Intuitive dashboard for client management</li>
+            <li><i class="fas fa-check-circle"></i> Clean architecture for scalability</li>
+          </ul>
+          <div class="project-stack">
+            <span>ASP.NET Core MVC</span><span>EF Core</span><span>SQL Server</span>
+          </div>
+        </div>
+
+        <!-- Discussion Board -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-comments"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Discussion Board</h3>
+          <p class="project-date">Oct 2024</p>
+          <p class="project-desc">
+            A modular discussion board built with Django MVT architecture supporting board, topic, and
+            post management with Django authentication and dynamic front-end templates.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Django MVT with relational data models</li>
+            <li><i class="fas fa-check-circle"></i> Full auth: registration, login, sessions</li>
+            <li><i class="fas fa-check-circle"></i> Dynamic templates with widget_tweaks</li>
+          </ul>
+          <div class="project-stack">
+            <span>Django</span><span>Python</span><span>Bootstrap</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <!-- Madaar RAG -->
+        <div class="project-card project-card--ai">
+          <div class="project-top">
+            <div class="project-icon project-icon--ai"><i class="fas fa-brain"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22/Madaar-rag" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-badge project-badge--ai">AI / RAG</div>
+          <h3 class="project-title">Madaar — Local RAG Chat</h3>
+          <p class="project-date">2025</p>
+          <p class="project-desc">
+            A self-contained Retrieval-Augmented Generation (RAG) chat app built with Django. Users upload
+            PDF documents and ask questions about their content — fully local, no external API keys needed.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Real-time chat via Django Channels & WebSockets</li>
+            <li><i class="fas fa-check-circle"></i> PDF upload → text extraction → FAISS vector store</li>
+            <li><i class="fas fa-check-circle"></i> 100% local AI: all-MiniLM-L6-v2 + flan-t5-small</li>
+            <li><i class="fas fa-check-circle"></i> Token-based auth & async Django architecture</li>
+          </ul>
+          <div class="project-stack">
+            <span>Django</span><span>Django Channels</span><span>WebSockets</span>
+            <span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>PyPDF2</span>
+          </div>
+        </div>
+
+        <!-- Employees Attendance -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-user-clock"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22/Employees-Attendence" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Employees Attendance System</h3>
+          <p class="project-date">2025</p>
+          <p class="project-desc">
+            An ASP.NET Core MVC web application for managing employee attendance records, featuring
+            a structured MVC architecture with Controllers, ViewModels, and EF Core database migrations.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Full MVC architecture with clean separation of concerns</li>
+            <li><i class="fas fa-check-circle"></i> EF Core with SQL Server & database migrations</li>
+            <li><i class="fas fa-check-circle"></i> Employee attendance tracking & management</li>
+          </ul>
+          <div class="project-stack">
+            <span>ASP.NET Core MVC</span><span>C#</span><span>EF Core</span><span>SQL Server</span>
+          </div>
+        </div>
+
+        <!-- Educational Platform -->
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Educational Platform</h3>
+          <p class="project-date">Jul 2024 – Sep 2024</p>
+          <p class="project-desc">
+            A CRUD system to manage students, courses, and departments. Built as an MVC project with
+            Entity Framework, middleware, dependencies, and dynamic forms tailored to user input.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Student, course & department management</li>
+            <li><i class="fas fa-check-circle"></i> EF Core with SQL Server integration</li>
+            <li><i class="fas fa-check-circle"></i> Dynamic forms with custom UX logic</li>
+          </ul>
+          <div class="project-stack">
+            <span>ASP.NET MVC</span><span>EF Core</span><span>SQL Server</span><span>C#</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05. Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-university"></i></div>
+        <div class="edu-content">
+          <h3>Bachelor of Computer Science</h3>
+          <p class="edu-school">Mansoura University — Faculty of Computers & Information Science</p>
+          <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Mansoura, Dakahliya, Egypt</p>
+          <p class="edu-date"><i class="far fa-calendar-alt"></i> Sep 2021 – June 2025</p>
+          <div class="edu-grade">
+            <i class="fas fa-star"></i> Graduation Grade: <strong>Very Good with Honour</strong>
+          </div>
+          <div class="edu-grade edu-grade--masters">
+            <i class="fas fa-microscope"></i> Currently applying for <strong>Master's Degree</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06. Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-sub">Have a project in mind or want to chat? I'm always open to new opportunities.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <p class="contact-item-label">Email</p>
+              <a href="mailto:ameraelbassal552005@gmail.com" class="contact-item-value">
+                ameraelbassal552005@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <p class="contact-item-label">Phone</p>
+              <a href="tel:+01550914683" class="contact-item-value">+01550914683</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <p class="contact-item-label">Location</p>
+              <span class="contact-item-value">Gharbia, Egypt</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/Ameramahmoud22" target="_blank" class="social-btn" aria-label="GitHub">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/amera-elbassal-50b984272" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Amera Elbassal<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">
+          Designed & Built by <strong>Amera Elbassal</strong> · 2025
+        </p>
+        <div class="footer-socials">
+          <a href="mailto:ameraelbassal552005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/Ameramahmoud22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/amera-elbassal-50b984272" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
