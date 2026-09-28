@@ -6,11 +6,10 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 **A fully responsive, dark-themed personal portfolio for Amera Elbassal — Backend Developer specializing in .NET Core & Django.**
 
-🌐 **Live Site:** [portfolio](ttps://ameramahmoud22.github.io/amera_portfilio/)  
+🌐 **Live Site:** [portfolio](https://ameramahmoud22.github.io/amera_portfilio/)  
 💼 **LinkedIn:** [amera-elbassal](https://www.linkedin.com/in/amera-elbassal-50b984272)  
 🐙 **GitHub:** [Ameramahmoud22](https://github.com/Ameramahmoud22)
 
